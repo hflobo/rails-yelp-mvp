@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+<div class="d-flex flex-column">
+  <div class="d-flex flex-row">
+    <div class="name p-2">Name</div>
+    <div class="category p-2">Category</div>
+    <div class="rating p-2">Rating</div>
+    <div class="address p-2">Address</div>
+    <div class="phone p-2">Phone</div>
+  </div>
+
+  <% @restaurants.each do |restaurant| %>
+    <div class="d-flex flex-row">
+      <div class="name p-2"><%= link_to restaurant.name, restaurant %></div>
+      <div class="category p-2"><%= restaurant.category %></div>
+      <div class="rating p-2"><%= restaurant.average_rating %></div>
+      <div class="address p-2"><%= restaurant.address %></div>
+      <div class="phone p-2"><%= restaurant.phone_number %></div>
+    </div>
+  <% end %>
+</div>
+
